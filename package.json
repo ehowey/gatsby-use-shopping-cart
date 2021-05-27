@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "workspaces": [
+    "gatsby-starter-use-shopping-cart",
+    "gatsby-plugin-use-shopping-cart"
+  ],
+  "name": "gatsby-use-shopping-cart",
+  "devDependencies": {},
+  "scripts": {
+    "develop:starter": "yarn workspace gatsby-starter-use-shopping-cart develop"
+  }
+}
