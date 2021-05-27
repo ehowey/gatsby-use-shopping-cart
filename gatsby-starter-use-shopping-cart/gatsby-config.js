@@ -31,10 +31,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-use-shopping-cart`,
       options: {
-        mode: "client-only",
+        mode: "payment",
+        cartMode: "client-only",
         stripePublicKey: process.env.GATSBY_STRIPE_PUBLIC_KEY,
-        successUrl: "wwww.google.com",
-        cancelUrl: "www.stripe.com",
+        successUrl: "https://www.google.com", // url must start with http or https
+        cancelUrl: "https://www.stripe.com", // url must start with http or https
         currency: "USD",
         allowedCountries: ["US", "GB", "CA"],
         billingAddressCollection: true,

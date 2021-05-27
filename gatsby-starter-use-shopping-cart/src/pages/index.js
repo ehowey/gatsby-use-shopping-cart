@@ -6,13 +6,10 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Product from "../components/product"
 import Cart from "../components/cart"
-
 import { useStripeProducts } from "../hooks/use-stripe-products"
 
 const IndexPage = () => {
   const products = useStripeProducts()
-
-  console.log(products)
 
   return (
     <Layout>
