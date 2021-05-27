@@ -7,6 +7,9 @@
   "name": "gatsby-use-shopping-cart",
   "devDependencies": {},
   "scripts": {
-    "develop:starter": "yarn workspace gatsby-starter-use-shopping-cart develop"
+    "develop:starter": "yarn workspace gatsby-starter-use-shopping-cart develop",
+    "clean:starter": "yarn workspace gatsby-starter-use-shopping-cart clean",
+    "build:starter": "yarn workspace gatsby-starter-use-shopping-cart build",
+    "serve:starter": "yarn workspace gatsby-starter-use-shopping-cart serve"
   }
 }
