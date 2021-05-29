@@ -14,7 +14,7 @@ const Store = () => {
       <h1>Store</h1>
       <div className={storeStyles.productsWrapper}>
         {products.map(product => (
-          <ProductCard product={product} />
+          <ProductCard product={product} key={product.name} />
         ))}
       </div>
       <Cart />

@@ -11,10 +11,6 @@ module.exports = {
     siteUrl: `https://www.myawesomesite.com`,
     menuLinks: [
       {
-        name: "Home",
-        link: "/",
-      },
-      {
         name: "Store",
         link: "/store",
       },

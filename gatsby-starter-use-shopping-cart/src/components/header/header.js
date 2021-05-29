@@ -1,11 +1,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { useShoppingCart } from "use-shopping-cart"
 import { useSiteMetadata } from "../../hooks/use-site-metadata"
 import * as headerStyles from "./header.module.css"
 
 const Header = () => {
   const { title, menuLinks } = useSiteMetadata()
+  const { cartCount } = useShoppingCart()
   return (
     <header>
       <div className={headerStyles.branding}>
@@ -28,10 +30,15 @@ const Header = () => {
       <nav>
         <ul>
           {menuLinks.map(link => (
-            <li>
+            <li key={link.link}>
               <Link to={link.link}>{link.name}</Link>
             </li>
           ))}
+          <li>
+            <button className={headerStyles.cartButton}>
+              Cart({cartCount})
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
