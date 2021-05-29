@@ -6,7 +6,23 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Use-Shopping-Cart`,
     description: `Kick off your next, great ecommerce project with this Stripe and use-shopping-cart starter. Use-shopping-cart provides a cart management and validation API layer for Stripe. Payments are all handled securely by Stripe.`,
-    author: `@gatsbyjs`,
+    author: `@erchwy`,
+    keywords: [`use-shopping-cart`, "stripe", "gatsby", "ecommerce"],
+    siteUrl: `https://www.myawesomesite.com`,
+    menuLinks: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "Store",
+        link: "/store",
+      },
+      {
+        name: "Subscriptions",
+        link: "/subscriptions",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -50,7 +66,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/usc-logo-512.png`, // This path is relative to the root of the site.
       },
     },
   ],

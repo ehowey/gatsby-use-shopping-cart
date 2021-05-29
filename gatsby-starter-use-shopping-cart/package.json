@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-use-shopping-cart",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A simple starter to get up and developing quickly with Gatsby, Use-Shopping-Cart, and Stripe.",
+  "version": "0.0.1",
+  "author": "Eric Howey <ehowey@gmail.com>",
   "dependencies": {
     "gatsby": "^3.6.0",
     "gatsby-plugin-image": "^1.6.0",

@@ -22,6 +22,7 @@ const Cart = () => {
 
   return (
     <div>
+      <h3>Cart</h3>
       {/* This is where we'll render our cart */}
       <p>Number of Items: {cartCount}</p>
       <p>Total: {formattedTotalPrice}</p>
