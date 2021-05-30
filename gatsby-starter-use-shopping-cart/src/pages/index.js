@@ -1,22 +1,24 @@
 import * as React from "react"
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
+import DebugCart from "../components/debugCart"
+import ProductCard from "../components/productCard"
+import { useStripeProducts } from "../hooks/use-stripe-products"
 
-const IndexPage = () => {
+const Store = () => {
+  const products = useStripeProducts()
   return (
     <Layout>
-      <Seo title="Home" />
-      <h1>Ready to make some money?</h1>
-      <p>
-        Welcome to your new Gatsby ecommerce site using{" "}
-        <a href="https://stripe.com/en-ca">Stripe</a> and{" "}
-        <a href="https://useshoppingcart.com/">use-shopping-cart</a>. This a
-        barebones starter so you can see how to wire up your own store.
-      </p>
-      <h2>What's inside</h2>
-      <p>Now go sell something great.</p>
+      <Seo title="Store" />
+      <h1>Store</h1>
+      <div className="productsWrapper">
+        {products.map(product => (
+          <ProductCard product={product} key={product.name} />
+        ))}
+      </div>
+      <DebugCart />
     </Layout>
   )
 }
 
-export default IndexPage
+export default Store

@@ -7,15 +7,23 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import Header from "../header/header"
-import Footer from "../footer/footer"
+import { useShoppingCart } from "use-shopping-cart"
+import Header from "./header"
+import Footer from "./footer"
+import Cart from "./cart"
 import "./modern-css-reset.css"
-import * as layoutStyles from "./layout.module.css"
+import "./style.css"
 
 const Layout = ({ children }) => {
+  const { shouldDisplayCart } = useShoppingCart()
   return (
-    <div className={layoutStyles.siteContainer}>
+    <div className="siteContainer">
       <Header />
+      {shouldDisplayCart ? (
+        <div className="cartModal">
+          <Cart />
+        </div>
+      ) : null}
       <main>{children}</main>
       <Footer />
     </div>

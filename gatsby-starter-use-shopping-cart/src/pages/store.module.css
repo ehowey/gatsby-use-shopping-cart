@@ -1,6 +1,0 @@
-.productsWrapper {
-  margin: 2rem 0;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}

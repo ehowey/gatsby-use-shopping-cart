@@ -1,10 +1,10 @@
 import { useStaticQuery, graphql } from "gatsby"
-export const useStripeProducts = () => {
+export const useStripeSubscriptions = () => {
   const data = useStaticQuery(
     graphql`
-      query StripeProductQuery {
+      query StripeSubscriptionQuery {
         allStripePrice(
-          filter: { type: { eq: "one_time" }, active: { eq: true } }
+          filter: { type: { eq: "recurring" }, active: { eq: true } }
         ) {
           nodes {
             id
@@ -16,11 +16,11 @@ export const useStripeProducts = () => {
               id
               name
               description
-              localFiles {
-                childImageSharp {
-                  gatsbyImageData(aspectRatio: 1)
-                }
-              }
+            }
+            recurring {
+              interval
+              interval_count
+              usage_type
             }
           }
         }
@@ -28,16 +28,15 @@ export const useStripeProducts = () => {
     `
   )
 
-  const rawProducts = data.allStripePrice.nodes
+  const rawSubscriptions = data.allStripePrice.nodes
 
-  const products = rawProducts.map(node => ({
+  const subscriptions = rawSubscriptions.map(node => ({
     name: node.product.name,
     description: node.product.description,
     price_id: node.id,
     price: node.unit_amount,
-    image: node.product.localFiles[0].childImageSharp.gatsbyImageData,
     currency: node.currency,
   }))
 
-  return products
+  return subscriptions
 }

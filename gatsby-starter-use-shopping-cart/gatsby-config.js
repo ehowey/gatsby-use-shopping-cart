@@ -12,7 +12,7 @@ module.exports = {
     menuLinks: [
       {
         name: "Store",
-        link: "/store",
+        link: "/",
       },
       {
         name: "Subscriptions",
@@ -37,7 +37,7 @@ module.exports = {
       options: {
         objects: ["Price"],
         secretKey: process.env.STRIPE_SECRET_KEY,
-        downloadFiles: false,
+        downloadFiles: true,
       },
     },
     {

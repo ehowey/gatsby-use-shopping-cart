@@ -2,28 +2,27 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useShoppingCart } from "use-shopping-cart"
-import { useSiteMetadata } from "../../hooks/use-site-metadata"
-import * as headerStyles from "./header.module.css"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 const Header = () => {
   const { title, menuLinks } = useSiteMetadata()
-  const { cartCount } = useShoppingCart()
+  const { cartCount, handleCartClick } = useShoppingCart()
+
   return (
     <header>
-      <div className={headerStyles.branding}>
-        <div className={headerStyles.logo}>
+      <div className="branding">
+        <div className="logo">
           <Link to="/">
             <StaticImage
-              src="../../images/usc-logo-512.png"
+              src="../images/usc-logo-512.png"
               width={150}
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
               alt="Use Shopping Cart logo"
-              // style={{ marginBottom: `1.45rem` }}
             />
           </Link>
         </div>
-        <span className={headerStyles.title}>
+        <span className="siteTitle">
           <Link to="/">{title}</Link>
         </span>
       </div>
@@ -35,9 +34,7 @@ const Header = () => {
             </li>
           ))}
           <li>
-            <button className={headerStyles.cartButton}>
-              Cart({cartCount})
-            </button>
+            <button onClick={() => handleCartClick()}>Cart({cartCount})</button>
           </li>
         </ul>
       </nav>

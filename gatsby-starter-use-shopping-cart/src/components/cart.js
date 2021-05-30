@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-
 import { useShoppingCart } from "use-shopping-cart"
 
 const buttonStyles = {

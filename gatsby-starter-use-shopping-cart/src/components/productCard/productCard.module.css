@@ -1,0 +1,9 @@
+.productCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 4px;
+}
