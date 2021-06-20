@@ -1,13 +1,11 @@
 import * as React from "react"
 
 const Footer = () => (
-  <footer
-    style={{
-      marginTop: `2rem`,
-    }}
-  >
+  <footer>
     © {new Date().getFullYear()}, Built with
     {` `}
+    <a href="https://useshoppingcart.com/">Use-Shopping-Cart</a>,{" "}
+    <a href="https://www.stripe.com">Stripe</a>,{" "}
     <a href="https://www.gatsbyjs.com">Gatsby</a>
   </footer>
 )

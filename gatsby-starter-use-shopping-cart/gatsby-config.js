@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter Use-Shopping-Cart`,
-    description: `Kick off your next, great ecommerce project with this Stripe and use-shopping-cart starter. Use-shopping-cart provides a cart management and validation API layer for Stripe. Payments are all handled securely by Stripe.`,
+    description: `Kick off your next, great ecommerce project with this Stripe and use-shopping-cart starter. Use-shopping-cart provides a cart management API layer for Stripe. Payments are all handled securely by Stripe.`,
     author: `@erchwy`,
     keywords: [`use-shopping-cart`, "stripe", "gatsby", "ecommerce"],
     siteUrl: `https://www.myawesomesite.com`,
@@ -13,10 +13,6 @@ module.exports = {
       {
         name: "Store",
         link: "/",
-      },
-      {
-        name: "Subscriptions",
-        link: "/subscriptions",
       },
     ],
   },
