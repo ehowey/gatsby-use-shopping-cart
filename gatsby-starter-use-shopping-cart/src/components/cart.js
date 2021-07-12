@@ -1,42 +1,46 @@
 import React from "react"
 import { useShoppingCart } from "use-shopping-cart"
-
-const buttonStyles = {
-  fontSize: "13px",
-  textAlign: "center",
-  color: "#fff",
-  outline: "none",
-  padding: "12px",
-  boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
-  backgroundColor: "rgb(255, 178, 56)",
-  borderRadius: "6px",
-  letterSpacing: "1.5px",
-}
+import CartItem from "./cartItem"
 
 const Cart = () => {
   /* Gets the totalPrice and a method for redirecting to stripe */
-  const { formattedTotalPrice, redirectToCheckout, cartCount, clearCart } =
-    useShoppingCart()
+  const {
+    formattedTotalPrice,
+    redirectToCheckout,
+    cartCount,
+    clearCart,
+    cartDetails,
+    handleCloseCart,
+  } = useShoppingCart()
 
   return (
     <div>
+      <button
+        onClick={() => {
+          handleCloseCart()
+        }}
+      >
+        Close Cart
+      </button>
       <h3>Cart</h3>
+
       {/* This is where we'll render our cart */}
       <p>Number of Items: {cartCount}</p>
+      {/* This is where we'll render our items in the cart. USC gives you the products as an object and you need to extract the values from that object. */}
+      {Object.values(cartDetails).map(product => (
+        <CartItem key={product.id} product={product} />
+      ))}
       <p>Total: {formattedTotalPrice}</p>
 
       {/* Redirects the user to Stripe */}
       <button
-        style={buttonStyles}
         onClick={() => {
           redirectToCheckout()
         }}
       >
         Checkout
       </button>
-      <button style={buttonStyles} onClick={clearCart}>
-        Clear cart
-      </button>
+      <button onClick={clearCart}>Clear cart</button>
     </div>
   )
 }
