@@ -3,7 +3,7 @@ import { useShoppingCart } from "use-shopping-cart"
 import CartItem from "./cartItem"
 
 const Cart = () => {
-  /* Gets the totalPrice and a method for redirecting to stripe */
+  // TO DO Make the cart a proper modal
   const {
     formattedTotalPrice,
     redirectToCheckout,
@@ -14,7 +14,7 @@ const Cart = () => {
   } = useShoppingCart()
 
   return (
-    <div>
+    <div className="cartWrapper">
       <button
         onClick={() => {
           handleCloseCart()

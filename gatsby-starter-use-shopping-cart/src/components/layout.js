@@ -19,11 +19,7 @@ const Layout = ({ children }) => {
   return (
     <div className="siteContainer">
       <Header />
-      {shouldDisplayCart ? (
-        <div className="cartModal">
-          <Cart />
-        </div>
-      ) : null}
+      {shouldDisplayCart ? <Cart /> : null}
       <main>{children}</main>
       <Footer />
     </div>

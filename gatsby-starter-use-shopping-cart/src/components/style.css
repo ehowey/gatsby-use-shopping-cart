@@ -77,8 +77,10 @@ nav li:last-of-type {
   min-height: 100vh;
 }
 
-.cartModal {
+.cartWrapper {
   margin: 2rem auto;
+  padding: 2rem;
+  background-color: #dddddd;
 }
 
 .productsWrapper {
