@@ -98,6 +98,10 @@ nav li:last-of-type {
   margin-top: 0;
 }
 
+.cartProductName {
+  font-weight: 700;
+}
+
 .branding {
   display: grid;
   place-items: center;

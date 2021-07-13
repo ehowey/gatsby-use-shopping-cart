@@ -23,15 +23,15 @@ const Cart = () => {
         Close Cart
       </button>
       <h3>Cart</h3>
-
       {/* This is where we'll render our cart */}
       <p>Number of Items: {cartCount}</p>
       {/* This is where we'll render our items in the cart. USC gives you the products as an object and you need to extract the values from that object. */}
-      {Object.values(cartDetails).map(product => (
-        <CartItem key={product.id} product={product} />
-      ))}
+      <ul>
+        {Object.values(cartDetails).map(product => (
+          <CartItem key={product.id} product={product} />
+        ))}
+      </ul>
       <p>Total: {formattedTotalPrice}</p>
-
       {/* Redirects the user to Stripe */}
       <button
         onClick={() => {
