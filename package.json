@@ -1,15 +1,46 @@
 {
+  "name": "gatsby-usc-clientonly-example",
   "private": true,
-  "workspaces": [
-    "gatsby-starter-use-shopping-cart",
-    "gatsby-plugin-use-shopping-cart"
+  "description": "A simple starter to get up and developing quickly with Gatsby, Use-Shopping-Cart, and Stripe. Client side product validation.",
+  "version": "0.0.1",
+  "author": "Eric Howey <ehowey@gmail.com>",
+  "dependencies": {
+    "gatsby": "^3.12.1",
+    "gatsby-plugin-image": "^1.12.0",
+    "gatsby-plugin-manifest": "^3.12.0",
+    "gatsby-plugin-react-helmet": "^4.12.0",
+    "gatsby-plugin-sharp": "^3.12.0",
+    "gatsby-source-filesystem": "^3.12.0",
+    "gatsby-transformer-sharp": "^3.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "use-shopping-cart": "^3.0.3",
+    "gatsby-plugin-use-shopping-cart": "^0.0.1",
+    "gatsby-source-stripe": "^3.2.2"
+  },
+  "devDependencies": {
+    "prettier": "2.3.2"
+  },
+  "keywords": [
+    "gatsby"
   ],
-  "name": "gatsby-use-shopping-cart",
-  "devDependencies": {},
+  "license": "0BSD",
   "scripts": {
-    "develop:starter": "yarn workspace gatsby-starter-use-shopping-cart develop",
-    "clean:starter": "yarn workspace gatsby-starter-use-shopping-cart clean",
-    "build:starter": "yarn workspace gatsby-starter-use-shopping-cart build",
-    "serve:starter": "yarn workspace gatsby-starter-use-shopping-cart serve"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
